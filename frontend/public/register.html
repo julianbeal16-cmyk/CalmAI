@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="register_title">Register - CalmAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn" data-lang="en">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text">العربية</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="auth-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-heart-circle-check"></i>
+                    <span class="logo-text" data-i18n="site_name">CalmAI</span>
+                </a>
+            </div>
+            <div class="auth-links">
+                <span data-i18n="register_have_account">Already have an account?</span>
+                <a href="login.html" class="btn btn-outline" data-i18n="nav_login">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 data-i18n="register_title">Create Your Account</h1>
+                <p class="auth-subtitle" data-i18n="register_subtitle">
+                    Join CalmAI for personalized mental wellness support
+                </p>
+            </div>
+
+            <form id="registerForm" class="auth-form">
+                <!-- Success/Error Messages -->
+                <div id="messageContainer" class="message-container" style="display: none;"></div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" data-i18n="register_first_name">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required
+                               placeholder="John" data-i18n-placeholder="register_first_name_ph">
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" data-i18n="register_last_name">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required
+                               placeholder="Doe" data-i18n-placeholder="register_last_name_ph">
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="register_email">Email Address *</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="john@example.com" data-i18n-placeholder="register_email_ph">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" data-i18n="register_username">Username *</label>
+                    <div class="input-with-button">
+                        <input type="text" id="username" name="username" required
+                               placeholder="john.doe" data-i18n-placeholder="register_username_ph">
+                        <button type="button" id="suggestUsername" class="btn-suggest" data-i18n="register_suggest">
+                            Suggest
+                        </button>
+                    </div>
+                    <div class="form-hint" data-i18n="register_username_hint">
+                        Suggested based on your name. You can change it.
+                    </div>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" data-i18n="register_password">Password *</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text" data-i18n="password_strength">Strength: </span>
+                        <span id="strengthValue" data-i18n="password_weak">Weak</span>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" data-i18n="register_confirm_password">Confirm Password *</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <button type="button" class="toggle-password" id="toggleConfirmPassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="language" data-i18n="register_language">Preferred Language</label>
+                    <select id="language" name="language">
+                        <option value="en" data-i18n="lang_english">English</option>
+                        <option value="ar" data-i18n="lang_arabic">العربية</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                    <label for="agreeTerms">
+                        <span data-i18n="register_agree">I agree to the</span>
+                        <a href="#" id="termsLink" class="link" data-i18n="footer_terms">Terms of Service</a>
+                        <span data-i18n="register_and">and</span>
+                        <a href="#" id="privacyLink" class="link" data-i18n="footer_privacy">Privacy Policy</a>
+                    </label>
+                    <div class="error-message" id="termsError"></div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn" data-i18n="register_submit">
+                        Create Account
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p data-i18n="register_have_account">Already have an account?</p>
+                    <a href="login.html" class="link" data-i18n="nav_login">Sign In</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal for Policies -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-i18n="privacy_title">Privacy Policy</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="policyContent">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/language.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

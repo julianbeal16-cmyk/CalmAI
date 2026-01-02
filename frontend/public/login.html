@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="login_title">Login - CalmAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn" data-lang="en">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text">العربية</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="auth-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-heart-circle-check"></i>
+                    <span class="logo-text" data-i18n="site_name">CalmAI</span>
+                </a>
+            </div>
+            <div class="auth-links">
+                <span data-i18n="login_no_account">Don't have an account?</span>
+                <a href="register.html" class="btn btn-outline" data-i18n="nav_register">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1 data-i18n="login_title">Welcome Back</h1>
+                <p class="auth-subtitle" data-i18n="login_subtitle">
+                    Sign in to continue your mental wellness journey
+                </p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <!-- Success/Error Messages -->
+                <div id="messageContainer" class="message-container" style="display: none;"></div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="login_email">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="john@example.com" data-i18n-placeholder="login_email_ph">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" data-i18n="login_password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe" data-i18n="login_remember">Remember me</label>
+                    <a href="forgot-password.html" class="forgot-link" data-i18n="login_forgot">
+                        Forgot password?
+                    </a>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn" data-i18n="login_submit">
+                        Sign In
+                    </button>
+                </div>
+
+                <div class="auth-separator">
+                    <span data-i18n="login_or">Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="btn-social google" data-i18n="login_google">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button type="button" class="btn-social apple" data-i18n="login_apple">
+                        <i class="fab fa-apple"></i> Apple
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p data-i18n="login_no_account">Don't have an account?</p>
+                    <a href="register.html" class="link" data-i18n="nav_register">Create one now</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Modal for Policies -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-i18n="privacy_title">Privacy Policy</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="policyContent">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/language.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

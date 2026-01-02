@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{language === 'ar' ? 'تفعيل الحساب' : 'Account Verification'}}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            color: #4a90e2;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            color: #666;
+            font-size: 16px;
+        }
+        .content {
+            margin: 25px 0;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+    </style>
+</head>
+<body class="{{language === 'ar' ? 'rtl' : ''}}">
+    <div class="container">
+        <div class="header">
+            <div class="logo">CalmAI</div>
+            <div class="tagline">
+                {{language === 'ar' ? 'مساحتك الآمنة للراحة النفسية' : 'Your safe space for mental wellness'}}
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>{{language === 'ar' ? 'مرحباً ' : 'Hello '}}{{name}},</h2>
+            
+            <p>
+                {{language === 'ar' 
+                    ? 'شكراً لتسجيلك في CalmAI. يرجى تأكيد بريدك الإلكتروني للبدء باستخدام حسابك.' 
+                    : 'Thank you for signing up for CalmAI. Please confirm your email address to start using your account.'}}
+            </p>
+            
+            <div style="text-align: center;">
+                <a href="{{verificationLink}}" class="button">
+                    {{language === 'ar' ? 'تأكيد البريد الإلكتروني' : 'Verify Email Address'}}
+                </a>
+            </div>
+            
+            <p>
+                {{language === 'ar' 
+                    ? 'أو انسخ الرابط التالي في متصفحك:' 
+                    : 'Or copy and paste this link in your browser:'}}
+                <br>
+                <code style="background: #f5f5f5; padding: 5px; border-radius: 3px; word-break: break-all;">
+                    {{verificationLink}}
+                </code>
+            </p>
+            
+            <p>
+                {{language === 'ar' 
+                    ? 'ينتهي صلاحية رابط التفعيل خلال 24 ساعة.' 
+                    : 'This verification link will expire in 24 hours.'}}
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>
+                {{language === 'ar' 
+                    ? 'إذا لم تقم بإنشاء حساب في CalmAI، يرجى تجاهل هذا البريد.' 
+                    : 'If you did not create a CalmAI account, please ignore this email.'}}
+            </p>
+            <p>© 2024 CalmAI. {{language === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved'}}.</p>
+        </div>
+    </div>
+</body>
+</html>

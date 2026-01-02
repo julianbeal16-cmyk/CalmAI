@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmAI - Mental Wellness Support</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn" data-lang="en">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text">العربية</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-heart-circle-check"></i>
+                    <span class="logo-text" data-i18n="site_name">CalmAI</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" data-i18n="nav_home">Home</a>
+                    <a href="#features" data-i18n="nav_features">Features</a>
+                    <a href="#about" data-i18n="nav_about">About</a>
+                </div>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline" data-i18n="nav_login">Login</a>
+                    <a href="register.html" class="btn btn-primary" data-i18n="nav_register">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="main-content">
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        Your Safe Space for Mental Wellness
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        Find peace, support, and tools for your mental health journey in a 
+                        secure and compassionate environment.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="register.html" class="btn btn-primary btn-large" data-i18n="hero_cta">
+                            Start Your Journey
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-large" data-i18n="hero_learn">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-heartbeat"></i>
+                        <p data-i18n="image_placeholder">Mental Wellness</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title" data-i18n="features_title">How CalmAI Supports You</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 data-i18n="feature1_title">AI Support Chat</h3>
+                        <p data-i18n="feature1_desc">
+                            Talk to our compassionate AI assistant anytime, with conversations 
+                            stored securely on your device.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 data-i18n="feature2_title">Relaxing Games</h3>
+                        <p data-i18n="feature2_desc">
+                            Enjoy calming games designed to reduce stress and improve mood.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3 data-i18n="feature3_title">Mindfulness Exercises</h3>
+                        <p data-i18n="feature3_desc">
+                            Guided meditation, yoga, and breathing exercises for daily practice.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 data-i18n="feature4_title">Complete Privacy</h3>
+                        <p data-i18n="feature4_desc">
+                            Your conversations stay on your device. We respect your privacy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title" data-i18n="about_title">About CalmAI</h2>
+                    <p class="about-text" data-i18n="about_text">
+                        CalmAI is a mental health support platform designed to provide 
+                        accessible, private, and compassionate support. Our mission is to 
+                        make mental wellness tools available to everyone, with complete 
+                        respect for your privacy and security.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number" data-count="100">0</span>%
+                            <span class="stat-label" data-i18n="stat_private">Private</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="24">0</span>/7
+                            <span class="stat-label" data-i18n="stat_available">Available</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="0">0</span>
+                            <span class="stat-label" data-i18n="stat_ads">No Ads</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heart-circle-check"></i>
+                        <span class="logo-text">CalmAI</span>
+                    </div>
+                    <p class="footer-text" data-i18n="footer_tagline">
+                        Your safe space for mental wellness
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer_links">Links</h4>
+                    <a href="#home" data-i18n="nav_home">Home</a>
+                    <a href="login.html" data-i18n="nav_login">Login</a>
+                    <a href="register.html" data-i18n="nav_register">Register</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <a href="#" id="privacyLink" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" id="termsLink" data-i18n="footer_terms">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer_contact">Contact</h4>
+                    <p data-i18n="footer_email">support@calmai.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2024 CalmAI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Policies -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-i18n="privacy_title">Privacy Policy</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="policyContent">
+                    <!-- Content loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>

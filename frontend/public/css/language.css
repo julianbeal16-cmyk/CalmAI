@@ -1,0 +1,277 @@
+/* RTL Specific Styles */
+[dir="rtl"] {
+    /* Text alignment */
+    text-align: right;
+    
+    /* Margin and padding fixes */
+    .ml-auto {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+    
+    .mr-auto {
+        margin-right: 0 !important;
+        margin-left: auto !important;
+    }
+    
+    /* Form elements */
+    input, textarea, select {
+        text-align: right;
+    }
+    
+    /* Flexbox fixes */
+    .flex-row-reverse-rtl {
+        flex-direction: row-reverse;
+    }
+    
+    /* Navigation */
+    .nav-menu a::after {
+        left: auto;
+        right: 0;
+    }
+    
+    /* Modal close button */
+    .modal-close {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    /* Social links */
+    .social-links {
+        flex-direction: row-reverse;
+    }
+    
+    /* Checkbox and radio alignment */
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-left: var(--spacing-sm);
+        margin-right: 0;
+    }
+    
+    /* Lists */
+    ul, ol {
+        padding-right: var(--spacing-lg);
+        padding-left: 0;
+    }
+    
+    /* Dropdowns */
+    .dropdown-menu {
+        text-align: right;
+    }
+    
+    /* Icons with text */
+    .icon-left {
+        margin-right: 0;
+        margin-left: var(--spacing-sm);
+    }
+    
+    .icon-right {
+        margin-left: 0;
+        margin-right: var(--spacing-sm);
+    }
+    
+    /* Float replacements */
+    .float-left {
+        float: right;
+    }
+    
+    .float-right {
+        float: left;
+    }
+    
+    /* Text alignment utilities */
+    .text-left {
+        text-align: right;
+    }
+    
+    .text-right {
+        text-align: left;
+    }
+    
+    .text-start {
+        text-align: right;
+    }
+    
+    .text-end {
+        text-align: left;
+    }
+}
+
+/* Smooth transition for RTL/LTR switch */
+body, .container, .modal-content, .auth-card, .feature-card {
+    transition: all 0.3s ease;
+}
+
+/* Language specific font sizes for Arabic */
+[lang="ar"] {
+    font-size: 1.05em; /* Slightly larger for better readability */
+    line-height: 1.8; /* Increased line height for Arabic */
+}
+
+[lang="ar"] h1,
+[lang="ar"] h2,
+[lang="ar"] h3,
+[lang="ar"] h4 {
+    line-height: 1.4;
+}
+
+/* Fix for mixed content */
+[dir="rtl"] .mixed-content {
+    unicode-bidi: plaintext;
+}
+
+/* Number formatting in RTL */
+[dir="rtl"] .numbers-ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+/* Ensure proper alignment for form labels in RTL */
+[dir="rtl"] .form-group label {
+    text-align: right;
+    display: block;
+}
+
+/* Fix for button icons in RTL */
+[dir="rtl"] .btn i:first-child {
+    margin-left: var(--spacing-sm);
+    margin-right: 0;
+}
+
+[dir="rtl"] .btn i:last-child {
+    margin-right: var(--spacing-sm);
+    margin-left: 0;
+}
+
+/* Table fixes for RTL */
+[dir="rtl"] table {
+    direction: rtl;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+    text-align: right;
+}
+
+/* Calendar/Date picker RTL support */
+[dir="rtl"] .calendar {
+    direction: rtl;
+}
+
+/* Progress bars in RTL */
+[dir="rtl"] .progress-bar {
+    transform: rotateY(180deg);
+}
+
+/* Tooltip positioning in RTL */
+[dir="rtl"] .tooltip {
+    transform: translateX(100%);
+}
+
+/* Notification badges in RTL */
+[dir="rtl"] .badge {
+    left: auto;
+    right: -5px;
+}
+
+/* Breadcrumb separator in RTL */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+    content: "\\";
+    transform: rotate(180deg);
+}
+
+/* Pagination in RTL */
+[dir="rtl"] .pagination {
+    direction: rtl;
+}
+
+/* Dropdown carets in RTL */
+[dir="rtl"] .dropdown-toggle::after {
+    margin-left: 0;
+    margin-right: 0.255em;
+}
+
+/* Input groups in RTL */
+[dir="rtl"] .input-group > .form-control,
+[dir="rtl"] .input-group > .custom-select {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+[dir="rtl"] .input-group > .input-group-append:last-child > .btn,
+[dir="rtl"] .input-group > .input-group-append:last-child > .input-group-text {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* Modal animations for RTL */
+[dir="rtl"] .modal.fade .modal-dialog {
+    transform: translateX(25%);
+}
+
+[dir="rtl"] .modal.show .modal-dialog {
+    transform: translateX(0);
+}
+
+/* Toast notifications in RTL */
+[dir="rtl"] .toast {
+    text-align: right;
+}
+
+/* Chat messages alignment in RTL */
+[dir="rtl"] .message-sent {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .message-received {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Ensure proper scrollbar positioning in RTL */
+[dir="rtl"] ::-webkit-scrollbar {
+    direction: rtl;
+}
+
+/* Fix for background gradients in RTL */
+[dir="rtl"] .gradient-bg {
+    transform: rotateY(180deg);
+}
+
+/* Ensure images don't flip in RTL */
+[dir="rtl"] img,
+[dir="rtl"] svg,
+[dir="rtl"] canvas {
+    transform: none;
+}
+
+/* Timeline in RTL */
+[dir="rtl"] .timeline {
+    direction: rtl;
+}
+
+[dir="rtl"] .timeline-item::before {
+    left: auto;
+    right: -6px;
+}
+
+/* Stats counter animation in RTL */
+[dir="rtl"] .stat-number {
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+/* Fix for code blocks in RTL */
+[dir="rtl"] code,
+[dir="rtl"] pre {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: embed;
+}
+
+/* Ensure proper printing in RTL */
+@media print {
+    [dir="rtl"] {
+        direction: rtl;
+        text-align: right;
+    }
+}

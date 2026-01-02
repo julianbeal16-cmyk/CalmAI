@@ -1,0 +1,17 @@
+{
+  "name": "calmai-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for CalmAI - Mental Health Support Platform",
+  "scripts": {
+    "start": "live-server public --port=3000",
+    "build": "echo 'Build process would go here'",
+    "dev": "live-server public --port=3000 --watch=public"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "crypto-js": "^4.1.1"
+  }
+}
